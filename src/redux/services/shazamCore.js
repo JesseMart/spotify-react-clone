@@ -7,7 +7,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
         baseQuery: fetchBaseQuery({
             baseUrl: 'https://shazam-core.p.rapidapi.com/v1',
             prepareHeaders: (headers) => {
-                headers.set('X-RapidAPI-Key', 'a92945e334mshd8eabece9b2af16p1aec92jsna7aff7fdaf92')
+                headers.set('X-RapidAPI-Key', import.meta.env.VITE_SHAZAM_CORE_RAPID_API_KEY)
 
                 return headers;
             }
@@ -15,7 +15,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
         endpoints: (builder) => ({
             getTopCharts: builder.query({ query : () => '/charts/world'}),
             getSongsByGenre: builder.query({ query : (genre) => `/charts/genre-world?genre_code=${genre}`}),
-            getSongsByCountry: builder.query({ query : (countryCode) => `/charts/country?country?country_code=${countryCode}`}),
+            getSongsByCountry: builder.query({ query : (countryCode) => `/charts/country?country_code=${countryCode}`}),
             getSongsBySearch: builder.query({ query : (searchTerm) => `/search/multi?search_type=SONGS_ARTISTS&query=${searchTerm}`}),
             getArtistDetails: builder.query({ query : (artistId) => `/artists/details?artist_id=${artistId}`}),
             getSongDetails: builder.query({ query : ({ songid }) => `/tracks/details?track_id=${songid}`}),
