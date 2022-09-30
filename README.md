@@ -1,8 +1,8 @@
-# Project Lyrics
+# Project Lyrics (Spotify Clone)
 
-Develop an elegant React.js Music Application. 
+This is a React.js Music Application inspired by Spotify
 
-Check out the complete project requirements [here](https://docs.google.com/document/d/13PeFwRlPEhMw_HPyrIrInvQuKaVWnpNmcv-y3NA208s/edit?usp=sharing)
+![home-page]('../image-readme/)
 
 # Contributing
 
